@@ -15,7 +15,9 @@
     "publish": true
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "hono": "4.7.7",
+    "openai": "^5.5.1",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },

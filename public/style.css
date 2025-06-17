@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+#main, #wrapper, body{
+  position: relative;
+}
+#sb-bg {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  z-index: 999px;
+  min-width: 100%; /* Ensure the video takes up at least 100% of the viewport width */
+  min-height: 100%; /* Ensure the video takes up at least 100% of the viewport height */
+}
+.content {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  min-width: 100%; /* Ensure the video takes up at least 100% of the viewport width */
+  min-height: 100%; /* Ensure the video takes up at least 100% of the viewport height */
+  opacity: 1;
+}
+
+#seduction-video {
+  position: absolute; /* Position the video relative to the viewport */
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  min-width: 100%; /* Ensure the video takes up at least 100% of the viewport width */
+  min-height: 100%; /* Ensure the video takes up at least 100% of the viewport height */
+  opacity: .40;
+}
+.centered-div {
+  display:none;
+  position: absolute;
+  z-index:1050;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

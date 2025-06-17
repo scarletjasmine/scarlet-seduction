@@ -1,0 +1,30 @@
+.convo {
+  color: #fff;
+  background-color: #000;
+  line-height: 1.5em;
+  font-size:12px;
+  opacity: 0.65;
+  max-width: 525px;
+  padding: 4px;
+}
+
+
+.convo.isUser {
+  color: #FF2400;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 13px 10px 13px 10px;
+} 
+
+.space {
+  width:375px;
+  padding: 10px;
+  margin-right:8px;
+}
+
+.speak-to-beast {
+  color: #FF2400;
+  font-weight: bold;
+  background-color: #000;
+  margin-bottom: 4px;
+}

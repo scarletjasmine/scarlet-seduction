@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-image: url('./assets/scarletbeast.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .logo {
@@ -22,7 +26,7 @@
 }
 
 @keyframes logo-spin {
-  from {
+ t from {
     transform: rotate(0deg);
   }
   to {
