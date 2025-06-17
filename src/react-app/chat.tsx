@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { OpenAI } from 'openai';
 import { useEffect } from 'react';
 import './assets/css/chat.css';
+import dotenv from 'dotenv';
+dotenv.config();
 /*import { ChatCompletionMessageParam } from "openai/resources/chat";*/
 
 
@@ -20,7 +22,7 @@ export default function Chat() {
 
 
 
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const openai = new OpenAI({ apiKey: process.env.REACT_APP_OPENAI_API_KEY });
 
   const sendMessage = async () => {
     if (firstRun == true) {
