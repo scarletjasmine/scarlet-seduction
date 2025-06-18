@@ -32,7 +32,7 @@ export default function Chat() {
         const response = await openai.chat.completions.create({
           model: "gpt-4.1",
           messages: [{ content: blood, role: 'developer' }],
-            ;
+        });
         setMessages([{ content: blood, role: "developer" }, { content: response.choices[0].message.content, role: 'assistant' }]);
           catch (error) {
           console.error('Error fetching response from OpenAI:', error);
@@ -45,7 +45,7 @@ export default function Chat() {
             const response = await openai.chat.completions.create({
               model: "gpt-4.1",
               messages: [...messages, { role: "user", content: input }],
-            ;
+            });
             setMessages([...messages, { content: input, role: 'user' }, { content: response.choices[0].message.content, role: 'assistant' }]);
           catch (error) {
               console.error('Error fetching response from OpenAI:', error);
