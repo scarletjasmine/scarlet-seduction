@@ -2,20 +2,9 @@ import React, { useState } from 'react';
 import { OpenAI } from 'openai';
 import { useEffect } from 'react';
 import './assets/css/chat.css';
-import { Hono } from 'hono';
 
 
-const app = new Hono<{ Bindings: Env }>();
-
-const key = app.get("/api/", function(c){
-
-return c.env.OPENAI_API_KEY;
-
-});
-/*import { ChatCompletionMessageParam } from "openai/resources/chat";*/
-
-
-export default function Chat() {
+export default function Chat(key) {
   useEffect(() => {
     sendMessage();
   }, []); // Empty dependency array
