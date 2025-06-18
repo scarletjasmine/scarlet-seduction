@@ -2,8 +2,16 @@ import React, { useState } from 'react';
 import { OpenAI } from 'openai';
 import { useEffect } from 'react';
 import './assets/css/chat.css';
-import { env } from 'hono/adapter';
+import { Hono } from 'hono';
 
+
+const app = new Hono<{ Bindings: Env }>();
+
+const key = app.get("/api/", function(c){
+
+return c.env.OPENAI_API_KEY;
+
+});
 /*import { ChatCompletionMessageParam } from "openai/resources/chat";*/
 
 
@@ -22,7 +30,7 @@ export default function Chat() {
 
 
   const sendMessage = async () => {
-    const APIkey = await env.OPENAI_API_KEY;
+    const APIkey = key;
     const openai = new OpenAI({ apiKey: APIkey });
 
     if (firstRun == true) {
