@@ -17,8 +17,9 @@ export default function Chat() {
   const handleDisableButtons = () => {
     setButtonsDisabled(true);
   };
-  const openAIkey = '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';
-  const openai = new OpenAI({ apiKey: openAIkey, dangerouslyAllowBrowser: true });
+  const openAIkey = import.meta.env.REACT_APP_OPENAI_API_KEY;
+  const openai = new OpenAI({ apiKey: openAIkey });
+
 
   const sendMessage = async () => {
     if (firstRun == true) {
