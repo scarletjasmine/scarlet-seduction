@@ -18,7 +18,7 @@ export default function Chat() {
     setButtonsDisabled(true);
   };
   const openAIkey = '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';
-  const openai = new OpenAI({ apiKey: openAIkey });
+  const openai = new OpenAI({ apiKey: openAIkey, dangerouslyAllowBrowser: true });
 
   const sendMessage = async () => {
     if (firstRun == true) {
