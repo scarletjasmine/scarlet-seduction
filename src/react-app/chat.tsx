@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { OpenAI } from 'openai';
+
 import { useEffect } from 'react';
 import './assets/css/chat.css';
 
 
-export default function Chat(key) {
+export default function Chat(openai)) {
   useEffect(() => {
     sendMessage();
   }, []); // Empty dependency array
@@ -19,8 +19,7 @@ export default function Chat(key) {
 
 
   const sendMessage = async () => {
-    const APIkey = key;
-    const openai = new OpenAI({ apiKey: APIkey });
+
 
     if (firstRun == true) {
       setFirstRun(false);
