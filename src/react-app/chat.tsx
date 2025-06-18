@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { OpenAI } from 'openai';
 import { useEffect } from 'react';
 import './assets/css/chat.css';
-import { env } from "cloudflare:workers";
+import { env } from 'hono/adapter';
 
 /*import { ChatCompletionMessageParam } from "openai/resources/chat";*/
 
