@@ -22,7 +22,7 @@ export default function Chat() {
 
 
   const sendMessage = async () => {
-    const APIkey = await env.devil.get()
+    const APIkey = await env.OPENAI_API_KEY;
     const openai = new OpenAI({ apiKey: APIkey });
 
     if (firstRun == true) {
