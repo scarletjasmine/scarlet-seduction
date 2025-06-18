@@ -17,7 +17,7 @@ export default function Chat() {
   const handleDisableButtons = () => {
     setButtonsDisabled(true);
   };
-  const openAIkey = env.REACT_APP_OPENAI_API_KEY.get();
+  const openAIkey = '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';
   const openai = new OpenAI({ apiKey: openAIkey });
 
   const sendMessage = async () => {
