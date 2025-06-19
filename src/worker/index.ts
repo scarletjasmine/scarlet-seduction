@@ -6,7 +6,7 @@ const app = new Hono<{ Bindings: { OPENAI_API_KEY: string } }>()
 
 app.get('*', (c) => {
   const apikey = c.env.OPENAI_API_KEY;
-  return c.text(`OPENAI_API_KEY: ${apikey}`)
+  return c.text(`${apikey}`)
 })
 
 export default {
