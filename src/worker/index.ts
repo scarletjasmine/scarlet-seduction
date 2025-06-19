@@ -12,10 +12,10 @@ const app = new Hono();
 
 
 app.get('/', (c) => {
-  const apikey = c.env.OPENAI_API_KEY;
+  
 
   // ... render your TSX component and pass the variable as a prop
-  return c.html(<Chat key={apikey} />);
+  return c.html(<Chat {key: c.env.REACT_APP_OPENAI_API_KEY} />);
 });
 
 // Access to environme
