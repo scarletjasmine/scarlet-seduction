@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-
-import { useEffect } from 'react';
-import './assets/css/chat.css';
-import { OpenAI } from 'openai'
+//import React, { useState } from 'react';
+import React from 'react'
+//import { useEffect } from 'react';
+//import './assets/css/chat.css';
+//import { OpenAI } from 'openai'
   
 interface ChatProps {
-  key: string;
+  key: any;
 }
 
 
 
-const Chat: React.FC<ChatProps> = ({ key }) => {
+const Chat: React.FC<ChatProps>= ({ key }) => {
   console.log(`OpenAI API Key: ${key}`);
  /** useEffect(() => {
     sendMessage();
