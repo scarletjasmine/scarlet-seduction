@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import './assets/css/chat.css';
 import { OpenAI } from 'openai'
-  
-interface ChatProps {
-  openaiapikey: string | undefined
-}
 
 
-const Chat: React.FC<ChatProps>= ({ openaiapikey }) => {
+function Chat(props) {
+  const openaiapikey = props.openaiapikey;
  useEffect(() => {
     sendMessage();
   }, []); // Empty dependency arraym
