@@ -4,7 +4,7 @@ import './assets/css/chat.css';
 import { OpenAI } from 'openai'
   
 interface ChatProps {
-  apikey: string
+  apikey: string | null
 }
 
 
