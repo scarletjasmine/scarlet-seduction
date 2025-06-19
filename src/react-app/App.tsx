@@ -22,6 +22,9 @@ function App() {
 
     return (
         <div>
+          {openaikey ? (
+                <p>OpenAI API Key: {openaikey}</p>
+            )}
             <Chat openaiapikey={openaikey} />
         </div>
     );
