@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useEffect } from 'react';
 import './assets/css/chat.css';
-
+import { OpenAI } from 'openai'
   
 interface ChatProps {
   key: string;
