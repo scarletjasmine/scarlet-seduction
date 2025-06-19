@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-
+import Chat from '../react-app/chat';
 
 
 const app = new Hono<{ Bindings: Env }>();
@@ -7,7 +7,7 @@ const app = new Hono<{ Bindings: Env }>();
 app.get('*', (c) => {
   console.log(c.env);
   // Use apiKey and databaseUrl in your logic
-  return c.json({ message: 'Data fetched successfully' });
+  return c.html(<Chat "cat" />);
 });
 
 export default app;
