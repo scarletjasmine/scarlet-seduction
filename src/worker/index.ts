@@ -2,7 +2,7 @@
 import { Hono } from 'hono';
 
 interface Bindings {
-  OPENAI_API_KEYS: string;
+  OPENAI_API_KEY: string;
 }
 
 
