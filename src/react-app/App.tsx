@@ -1,4 +1,5 @@
 import "./App.css";
+import Chat from "./chat.tsx"
 
 import { useEffect, useState } from 'react';
 
@@ -21,7 +22,7 @@ function App() {
 
     return (
         <div>
-            <chat apikey={apikey} />
+            <Chat apikey={apikey} />
         </div>
     );
 }
