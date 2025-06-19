@@ -22,7 +22,7 @@ const Chat = (props: ChatProps) => {
   const handleDisableButtons = () => {
     setButtonsDisabled(true);
   };
-  console.log(openaiapikey);
+
   const openai = new OpenAI({
     apiKey: openaiapikey,
   });
