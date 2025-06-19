@@ -1,8 +1,8 @@
-//import React, { useState } from 'react';
+import React, { useState } from 'react';
 import React from 'react'
-//import { useEffect } from 'react';
-//import './assets/css/chat.css';
-//import { OpenAI } from 'openai'
+import { useEffect } from 'react';
+import './assets/css/chat.css';
+import { OpenAI } from 'openai'
   
 interface ChatProps {
   apikey: string
@@ -10,8 +10,7 @@ interface ChatProps {
 
 
 const Chat: React.FC<ChatProps>= ({ apikey }) => {
-  console.log(`OpenAI API Key: ${apikey}`);
- /** useEffect(() => {
+ useEffect(() => {
     sendMessage();
   }, []); // Empty dependency array
   const [firstRun, setFirstRun] = useState(true);
@@ -23,6 +22,9 @@ const Chat: React.FC<ChatProps>= ({ apikey }) => {
     setButtonsDisabled(true);
   };
 
+  const openai = new OpenAI({
+    apiKey: apikey,
+  });
 
   const sendMessage = async () => {
 -
