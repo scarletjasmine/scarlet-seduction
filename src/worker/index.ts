@@ -1,16 +1,20 @@
 import { Hono } from 'hono';
-import Chat from '../react-app/chat';
+/**import Chat from '../react-app/chat';*/
+
+interface Env {
+  OPENAI_API_KEY: string;
+}
+const app = new Hono<{ Bindings: Env }>()
 
 
-const app = new Hono<{ Bindings: Env }>();
-
-app.get('*', (c) => {
-  console.log(c.env);
-  // Use apiKey and databaseUrl in your logic
-  return c.html(<Chat "cat" />);
+app.get('/data', async (c) => {
+  const envVar = c.env.OPENAI_API_KEY;
+  return c.text(`Env var: ${envVar}`);
 });
 
-export default app;
+export default {
+  fetch: app.fetch
+}
 
 
 
