@@ -15,7 +15,7 @@ app.get('/', (c) => {
   
 
   // ... render your TSX component and pass the variable as a prop
-  return c.html(<Chat {key: c.env.REACT_APP_OPENAI_API_KEY} />);
+  return c.html(<Chat {apikey: c.env.REACT_APP_OPENAI_API_KEY} />);
 });
 
 // Access to environme

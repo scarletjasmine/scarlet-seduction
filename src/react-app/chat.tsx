@@ -5,12 +5,11 @@ import React from 'react'
 //import { OpenAI } from 'openai'
   
 interface ChatProps {
-  key: any;
+  apikey: string
 }
 
 
-
-const Chat: React.FC<ChatProps>= ({ key }) => {
+const Chat: React.FC<ChatProps>= ({ apikey }) => {
   console.log(`OpenAI API Key: ${key}`);
  /** useEffect(() => {
     sendMessage();
