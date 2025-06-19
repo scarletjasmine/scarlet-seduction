@@ -12,7 +12,7 @@ interface ChatProps {
 const Chat: React.FC<ChatProps>= ({ apikey }) => {
  useEffect(() => {
     sendMessage();
-  }, []); // Empty dependency array
+  }, []); // Empty dependency arraym
   const [firstRun, setFirstRun] = useState(true);
   const [messages, setMessages] = useState<any[]>([]);
   const [input, setInput] = useState('');
@@ -27,7 +27,6 @@ const Chat: React.FC<ChatProps>= ({ apikey }) => {
   });
 
   const sendMessage = async () => {
--
 
     if(firstRun === true) {
       setFirstRun(false);
