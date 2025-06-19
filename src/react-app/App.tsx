@@ -1,30 +1,16 @@
-/*// src/App.tsx
-
 import "./App.css";
 
-function App() {
-
-  return (
-    <>
-      
-    </>
-  );
-}
-export default App;*/
-
-
-// src/App.js
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [data, setData] = useState<string | null>(null);
+  const [apikey, setApikey] = useState<string | null>(null);
   
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch('/api/data'); // Request to your Hono Worker
+                const response = await fetch('/api/data');
                 const result = await response.text()
-                setData(result);
+                setApikey(result);
               
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -35,8 +21,7 @@ function App() {
 
     return (
         <div>
-            <h1>Welcome to the Scarlet Seduction</h1>
-          <h2> {data ? <p>{data}</p> : <p>Loading data...</p>}</h2>
+            <chat apikey={apikey} />
         </div>
     );
 }
