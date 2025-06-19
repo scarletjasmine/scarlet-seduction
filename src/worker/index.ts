@@ -4,7 +4,7 @@ import { Hono } from 'hono';
 
 const app = new Hono<{ Bindings: Env }>();
 
-app.get('/api/', (c) => {
+app.get('*', (c) => {
   console.log(c.env);
   // Use apiKey and databaseUrl in your logic
   return c.json({ message: 'Data fetched successfully' });
