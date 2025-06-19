@@ -10,10 +10,6 @@ interface ChatProps {
 
 
 
-
-
-
-
 const Chat: React.FC<ChatProps> = ({ key }) => {
   console.log(`OpenAI API Key: ${key}`);
   useEffect(() => {
