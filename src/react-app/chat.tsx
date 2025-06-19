@@ -4,11 +4,11 @@ import './assets/css/chat.css';
 import { OpenAI } from 'openai'
   
 interface ChatProps {
-  apikey: string | undefined
+  openaiapikey: string | undefined
 }
 
 
-const Chat: React.FC<ChatProps>= ({ apikey }) => {
+const Chat: React.FC<ChatProps>= ({ openaiapikey }) => {
  useEffect(() => {
     sendMessage();
   }, []); // Empty dependency arraym
@@ -20,9 +20,9 @@ const Chat: React.FC<ChatProps>= ({ apikey }) => {
   const handleDisableButtons = () => {
     setButtonsDisabled(true);
   };
-
+  console.log(openaiapikey);
   const openai = new OpenAI({
-    apiKey: apikey,
+    apiKey: openaiapikey,
   });
 
   const sendMessage = async () => {
