@@ -12,7 +12,7 @@ interface ChatProps {
 const Chat = (props: ChatProps) => {
   const openaiapikey = props.openaiapikey;
   const openai = new OpenAI({
-    apiKey: openaiapikey,
+    apiKey: openaiapikey, dangerouslyAllowBrowser: true
   });
  useEffect(() => {
     sendMessage();
