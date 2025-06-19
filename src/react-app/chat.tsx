@@ -10,7 +10,7 @@ interface ChatProps {
 
 
 const Chat: React.FC<ChatProps>= ({ apikey }) => {
-  console.log(`OpenAI API Key: ${key}`);
+  console.log(`OpenAI API Key: ${apikey}`);
  /** useEffect(() => {
     sendMessage();
   }, []); // Empty dependency array
@@ -25,7 +25,7 @@ const Chat: React.FC<ChatProps>= ({ apikey }) => {
 
 
   const sendMessage = async () => {
-
+-
 
     if (firstRun == true) {
       setFirstRun(false);
