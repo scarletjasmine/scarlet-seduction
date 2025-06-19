@@ -4,8 +4,9 @@ import Chat from "./chat.tsx"
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [data, setData] = useState<string | undefined>(undefined);
-  
+    const [data, setData] = useState<string | undefined>(undefined);
+    const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -16,13 +17,14 @@ function App() {
                 console.error('Error fetching data:', error);
             }
         }
-        fetchData();
+        fetchData().then(() => setIsLoading(false));
     }, []);
-
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
     return (
         <div>
-          {data ? <Chat openaiapikey={data} /> : <p>Loading...</p>}
-            
+          <Chat openaiapikey={data} />
         </div>
     );
 }
