@@ -1,5 +1,5 @@
 import "./App.css";
-import Chat from "./chat.tsx"
+//import Chat from "./chat.tsx"
 
 import { useEffect, useState } from 'react';
 
