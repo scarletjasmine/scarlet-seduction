@@ -1,12 +1,35 @@
+/*import Chat from '../react-app/chat.tsx';*/
 import { Hono } from 'hono';
-import Chat from '../react-app/chat.tsx';
+
+interface Bindings {
+  OPENAI_API_KEYS: string;
+}
 
 
 
-const app = new Hono();
+
+const app = new Hono<{ Bindings: Bindings }>();
+
+
+app.get('/api/data', (c) => {
+  const apiKey = c.env.OPENAI_API_KEY;
+  
+
+  // Use apiKey and databaseUrl in your logic
+  return c.json({ message: 'Data fetched successfully' });
+});
 
 
 
+
+
+
+
+
+/** 
+app.get('/', (c) => {
+  return c.text('Hello Hono!'); // Use the context object to create a response
+});
 
 
 
@@ -23,7 +46,7 @@ app.get('/', (c) => {
 // Access to environme
 export default app;
 
-/** 
+
 const app = new Hono();
 
 // Add more routes here
