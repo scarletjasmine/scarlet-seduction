@@ -8,8 +8,9 @@ const app = new Hono<{ Bindings: Env }>()
 
 
 app.get('/api/data', async (c) => {
-  const envVar = c.env.OPENAI_API_KEY;
-  return c.text(`Env var: ${envVar}`);
+ // const envVar = c.env.OPENAI_API_KEY;
+ // return c.text(`Env var: ${envVar}`);
+  return c.json({ message: 'Data from Hono Worker!' });
 });
 
 export default {
