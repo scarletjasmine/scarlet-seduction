@@ -4,7 +4,7 @@ import Chat from "./chat.tsx"
 import { useEffect, useState } from 'react';
 
 function App() {
-    const [data, setData] = useState<string | undefined>(undefined);
+    const [data, setData] = useState("");
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {

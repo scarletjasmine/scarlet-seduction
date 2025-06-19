@@ -6,11 +6,14 @@ import { OpenAI } from 'openai'
 
 
 interface ChatProps {
-  openaiapikey: string | undefined;
+  openaiapikey: string;
 }
 
 const Chat = (props: ChatProps) => {
   const openaiapikey = props.openaiapikey;
+  const openai = new OpenAI({
+    apiKey: openaiapikey,
+  });
  useEffect(() => {
     sendMessage();
   }, []); // Empty dependency arraym
@@ -23,9 +26,7 @@ const Chat = (props: ChatProps) => {
     setButtonsDisabled(true);
   };
 
-  const openai = new OpenAI({
-    apiKey: openaiapikey,
-  });
+  
 
   const sendMessage = async () => {
 
