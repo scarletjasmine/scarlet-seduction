@@ -75,6 +75,12 @@ const Chat: React.FC<ChatProps>= ({ key }) => {
       >Send</button>
     </React.Fragment>
   );*/
+  return (
+    <div>
+      {/* Your chat component content goes here */}
+      <p>This is the chat component.</p>
+    </div>
+  );
 }
 
 export default Chat;
