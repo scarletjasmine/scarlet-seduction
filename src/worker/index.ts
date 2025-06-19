@@ -11,9 +11,9 @@ interface Bindings {
 const app = new Hono<{ Bindings: Bindings }>();
 
 
-app.get('/api/data', (c) => {
+app.get('/api', (c) => {
   const apiKey = c.env.OPENAI_API_KEY;
-  
+  console.log(`OpenAI API Key: ${apiKey}`);
 
   // Use apiKey and databaseUrl in your logic
   return c.json({ message: 'Data fetched successfully' });
