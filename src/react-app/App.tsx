@@ -22,6 +22,7 @@ function App() {
 
     return (
         <div>
+          {apikey}
             <Chat apikey={apikey} />
         </div>
     );
