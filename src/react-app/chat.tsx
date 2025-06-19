@@ -12,7 +12,7 @@ interface ChatProps {
 
 const Chat: React.FC<ChatProps> = ({ key }) => {
   console.log(`OpenAI API Key: ${key}`);
-  useEffect(() => {
+ /** useEffect(() => {
     sendMessage();
   }, []); // Empty dependency array
   const [firstRun, setFirstRun] = useState(true);
@@ -74,7 +74,7 @@ const Chat: React.FC<ChatProps> = ({ key }) => {
         disabled={buttonsDisabled}
       >Send</button>
     </React.Fragment>
-  );
+  );*/
 }
 
 export default Chat;
