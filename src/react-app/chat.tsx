@@ -14,7 +14,7 @@ interface ChatProps {
 
 
 
-export Default function Chat: React.FC<ChatProps> = ({ key }) => {
+export default function Chat: React.FC<ChatProps> = ({ key }) => {
   console.log(`OpenAI API Key: ${key}`);
   useEffect(() => {
     sendMessage();
