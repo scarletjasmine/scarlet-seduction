@@ -9,7 +9,7 @@ interface ChatProps {
   openaiapikey: string | undefined;
 }
 
-const MyComponent = (props: MyComponentProps) => {
+const Chat = (props: ChatProps) => {
   const openaiapikey = props.openaiapikey;
  useEffect(() => {
     sendMessage();
