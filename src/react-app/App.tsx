@@ -10,10 +10,10 @@ function App() {
         async function fetchData() {
             try {
                 const response = await fetch('/api/data');
-                const result = await response.text()
-                console.log(response.text());
+                let result = await response.json();
+                result = result.apikey;
+                console.log(result);
                 setOpenaikey(result);
-              
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
