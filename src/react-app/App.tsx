@@ -14,17 +14,17 @@ export default App;*/
 
 
 // src/App.js
-import React, { useEffect, useState } from 'react';
+//import React, { useEffect, useState } from 'react';
 
 function App() {
-    const [data, setData] = useState(null);
+ //   const [data, setData] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
             try {
                 const response = await fetch('/api/data'); // Request to your Hono Worker
                 const result = await response.json();
-                setData(result.message);
+                //setData(result.message);
                 console.log(result.message);
             } catch (error) {
                 console.error('Error fetching data:', error);
