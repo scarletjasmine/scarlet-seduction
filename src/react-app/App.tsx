@@ -11,6 +11,7 @@ function App() {
             try {
                 const response = await fetch('/api/data');
                 const result = await response.text()
+                console.log(result);
                 setOpenaikey(result);
               
             } catch (error) {

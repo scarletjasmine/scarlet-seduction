@@ -4,9 +4,9 @@ import { Hono } from 'hono';
 
 const app = new Hono<{ Bindings: { OPENAI_API_KEY: string } }>()
 
-app.get('*', (c) => {
+app.get('/api/data, (c) => {
   const apikey = c.env.OPENAI_API_KEY;
-  return c.text(`${apikey}`)
+  return c.text(apikey)
 })
 
 export default {
