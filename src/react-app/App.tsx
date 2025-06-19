@@ -21,7 +21,7 @@ function App() {
 
     return (
         <div>
-          {data ? <p>OpenAI API Key: {data}</p> :}
+          {data ? <p>OpenAI API Key: {data}</p> : <p>Loading...</p>}
             
         </div>
     );
