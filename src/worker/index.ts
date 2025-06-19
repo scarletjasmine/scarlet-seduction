@@ -1,26 +1,16 @@
-/*import Chat from '../react-app/chat.tsx';*/
-//import { Hono } from 'hono';
-
-interface Bindings {
-  OPENAI_API_KEY: string;
-}
+import { Hono } from 'hono';
 
 
 
+const app = new Hono<{ Bindings: Env }>();
 
-const app = new Hono<{ Bindings: Bindings }>();
-
-
-app.get('/', (c) => {
-  const apiKey = c.env.OPENAI_API_KEY;
-  console.log(`OpenAI API Key: ${apiKey}`);
-
+app.get('/api/', (c) => {
+  console.log(c.env);
   // Use apiKey and databaseUrl in your logic
   return c.json({ message: 'Data fetched successfully' });
 });
 
-
-
+export default app;
 
 
 
