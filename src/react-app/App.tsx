@@ -1,5 +1,5 @@
 import "./App.css";
-//import Chat from "./chat.tsx"
+import Chat from "./chat.tsx"
 
 import { useEffect, useState } from 'react';
 
@@ -21,15 +21,10 @@ function App() {
 
     return (
         <div>
-          {data ? <p>OpenAI API Key: {data}</p> : <p>Loading...</p>}
+          {data ? <Chat openaiapikey={data} /> : <p>Loading...</p>}
             
         </div>
     );
 }
 
 export default App;
-
-
-/**
- * <Chat openaiapikey={openaikey} />
- */
