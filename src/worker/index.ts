@@ -1,5 +1,5 @@
 /*import Chat from '../react-app/chat.tsx';*/
-import { Hono } from 'hono';
+//import { Hono } from 'hono';
 
 interface Bindings {
   OPENAI_API_KEY: string;
@@ -11,7 +11,7 @@ interface Bindings {
 const app = new Hono<{ Bindings: Bindings }>();
 
 
-app.get('/api', (c) => {
+app.get('/', (c) => {
   const apiKey = c.env.OPENAI_API_KEY;
   console.log(`OpenAI API Key: ${apiKey}`);
 
