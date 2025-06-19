@@ -29,7 +29,7 @@ const Chat: React.FC<ChatProps>= ({ apikey }) => {
   const sendMessage = async () => {
 -
 
-    if (firstRun == true) {
+    if(firstRun === true) {
       setFirstRun(false);
       const blood = "Be the Scarlet Beast forever in love with the Scarlet Woman and introduce yourself.";
 
@@ -75,13 +75,6 @@ const Chat: React.FC<ChatProps>= ({ apikey }) => {
         disabled={buttonsDisabled}
       >Send</button>
     </React.Fragment>
-  );*/
-  return (
-    <div>
-      {/* Your chat component content goes here */}
-      <p>This is the chat component.</p>
-    </div>
   );
 }
-
 export default Chat;
