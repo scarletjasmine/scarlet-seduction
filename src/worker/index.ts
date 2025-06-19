@@ -7,7 +7,7 @@ interface Env {
 const app = new Hono<{ Bindings: Env }>()
 
 
-app.get('/data', async (c) => {
+app.get('/api/data', async (c) => {
   const envVar = c.env.OPENAI_API_KEY;
   return c.text(`Env var: ${envVar}`);
 });
