@@ -1,23 +1,25 @@
-import { Hono } from 'hono'
-const app = new Hono()
+import { Hono } from 'hono';
+import Chat from '../react-app/chat.tsx';
 
 
 
-type Bindings = {
-  OPENAI_API_KEY: string
-}
+const app = new Hono();
 
-const app = new Hono<{ Bindings: Bindings }>()
 
-app.get('/', async (c, next) => {
-          const key = c.req.param('OPENAI_API_KEY')
-          await c.env.DEVIL.get(key, c.req.body)
-          return c.text(`got ${key} successfully!`)
-        });
+
+
+
+
+
+app.get('/', (c) => {
+  const apikey = c.env.OPENAI_API_KEY;
+
+  // ... render your TSX component and pass the variable as a prop
+  return c.html(<Chat key={apikey} />);
+});
+
 // Access to environme
-export default {
-  fetch: app.fetch
-}
+export default app;
 
 /** 
 const app = new Hono();

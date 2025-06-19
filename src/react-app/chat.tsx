@@ -3,8 +3,19 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import './assets/css/chat.css';
 
+  
+interface ChatProps {
+  key: string;
+}
 
-export default function Chat(openai)) {
+
+
+
+
+
+
+export Default function Chat: React.FC<ChatProps> = ({ key }) => {
+  console.log(`OpenAI API Key: ${key}`);
   useEffect(() => {
     sendMessage();
   }, []); // Empty dependency array
