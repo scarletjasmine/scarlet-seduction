@@ -17,8 +17,8 @@ export default App;*/
 import { useEffect, useState } from 'react';
 
 function App() {
-   const [data, setData] = useState(null);
-
+  const [data, setData] = useState<string | null>(null);
+  
     useEffect(() => {
         async function fetchData() {
             try {
