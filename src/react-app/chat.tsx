@@ -4,7 +4,12 @@ import './assets/css/chat.css';
 import { OpenAI } from 'openai'
 
 
-function Chat(props) {
+
+interface ChatProps {
+  openaiapikey: string | undefined;
+}
+
+const MyComponent = (props: MyComponentProps) => {
   const openaiapikey = props.openaiapikey;
  useEffect(() => {
     sendMessage();
