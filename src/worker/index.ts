@@ -1,6 +1,18 @@
 import { Hono } from 'hono';
-/**import Chat from '../react-app/chat';*/
+//import { env } from 'hono/adapter';
 
+
+const app = new Hono<{ Bindings: { OPENAI_API_KEY: string } }>()
+
+app.get('*', (c) => {
+  const apikey = c.env.OPENAI_API_KEY;
+  return c.text(`OPENAI_API_KEY: ${apikey}`)
+})
+
+export default {
+  fetch: app.fetch
+}
+/** 
 interface Env {
   OPENAI_API_KEY: string;
 }
@@ -10,12 +22,10 @@ const app = new Hono<{ Bindings: Env }>()
 app.get('/api/data', async (c) => {
  // const envVar = c.env.OPENAI_API_KEY;
  // return c.text(`Env var: ${envVar}`);
-  return c.json({ message: 'Data from Hono Worker!' });
+  return c.json({ message:  });
 });
 
-export default {
-  fetch: app.fetch
-}
+
 
 
 
