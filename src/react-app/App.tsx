@@ -4,7 +4,7 @@ import Chat from "./chat.tsx"
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [apikey, setApikey] = useState<string | null>(null);
+  const [apikey, setApikey] = useState<string | undefined>(undefined);
   
     useEffect(() => {
         async function fetchData() {
